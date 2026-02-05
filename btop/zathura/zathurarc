@@ -1,0 +1,6 @@
+set recolor "true"
+set recolor-lightcolor "#1d2021"
+set recolor-darkcolor "#ebdbb2"
+set default-bg "#1d2021"
+set default-fg "#ebdbb2"
+set scroll-hstep 0
