@@ -1,0 +1,41 @@
+set mouse=a
+set rnu
+set number
+set incsearch
+set shortmess-=S
+set ignorecase
+set smartcase
+set tabstop=4
+set shiftwidth=4
+let mapleader = " "
+let localleader = ","
+
+" vim-plug
+call plug#begin('~/.config/vim/plugged')
+
+Plug 'alligator/accent.vim'
+Plug 'lervag/vimtex'
+Plug 'SirVer/ultisnips'
+
+call plug#end()
+
+"vimtex
+syntax enable
+let g:vimtex_view_method = 'zathura'
+let g:vimtex_compiler_method = 'latexmk'
+
+"themeing/colour
+let g:accent_colour = 'green'
+let g:accent_no_bg = 1
+
+"ultisnips
+let g:UltiSnipsExpandTrigger       = '<Tab>'
+let g:UltiSnipsJumpForwardTrigger  = '<C-n>'
+let g:UltiSnipsJumpBackwardTrigger = '<C-p>'
+let g:UltiSnipsSnippetDirectories  = ['UltiSnips']
+
+colorscheme accent
+nnoremap <up> <nop>
+nnoremap <down> <nop>
+nnoremap <left> <nop>
+nnoremap <right> <nop>
