@@ -1,5 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =3
-let g:netrw_dirhist_3='/home/anon1/work/uni-stuff/sem_II/intro_to_statistics_and_computation_with_data'
-let g:netrw_dirhist_2='/home/anon1/.config/systemd/user'
-let g:netrw_dirhist_1='/home/anon1/.config/systemd'

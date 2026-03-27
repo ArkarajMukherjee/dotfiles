@@ -35,7 +35,4 @@ let g:UltiSnipsJumpBackwardTrigger = '<C-p>'
 let g:UltiSnipsSnippetDirectories  = ['UltiSnips']
 
 colorscheme accent
-nnoremap <up> <nop>
-nnoremap <down> <nop>
-nnoremap <left> <nop>
-nnoremap <right> <nop>
+
