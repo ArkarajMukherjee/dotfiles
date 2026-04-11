@@ -1,3 +1,6 @@
+let mapleader = " "
+let localleader = ","
+
 set mouse=a
 set rnu
 set number
@@ -7,8 +10,12 @@ set ignorecase
 set smartcase
 set tabstop=4
 set shiftwidth=4
-let mapleader = " "
-let localleader = ","
+set path+=~/work/**,~/projects/**,~/.config/**
+set autochdir
+set hidden
+
+nnoremap <leader>b :b#<cr>
+nnoremap <tab> :b 
 
 " vim-plug
 call plug#begin('~/.config/vim/plugged')
@@ -23,6 +30,7 @@ call plug#end()
 syntax enable
 let g:vimtex_view_method = 'zathura'
 let g:vimtex_compiler_method = 'latexmk'
+let g:vimtex_quickfix_open_on_warning = 0
 
 "themeing/colour
 let g:accent_colour = 'green'
@@ -35,4 +43,8 @@ let g:UltiSnipsJumpBackwardTrigger = '<C-p>'
 let g:UltiSnipsSnippetDirectories  = ['UltiSnips']
 
 colorscheme accent
-
+nnoremap <up> <nop>
+nnoremap <down> <nop>
+nnoremap <left> <nop>
+nnoremap <right> <nop>
+set viminfo+=n~/.cache/vim/viminfo

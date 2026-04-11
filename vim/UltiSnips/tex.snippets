@@ -5,11 +5,27 @@ snippet su "Summation"
 endsnippet
 
 snippet int "Integration 1D"
-\int_{$1}_{$2}$3\,\mathrm{d}$4$0
+\int_{$1}^{$2}$3\,\mathrm{d}$4$0
 endsnippet
 
 snippet ff "Fractions" A
 \frac{$1}{$2}$0
+endsnippet
+
+snippet qb "qty brackets" A
+\qty($1)$0
+endsnippet
+
+snippet lim "limits"
+\lim_{$1}$0
+endsnippet
+
+snippet ss "subseteq"
+\subseteq$0
+endsnippet
+
+snippet st "set"
+\qty{$1}$0
 endsnippet
 
 # ENVIRONMENTS
@@ -58,4 +74,26 @@ endsnippet
 
 snippet tt "typewriter text" A
 \texttt{$1}$0
+endsnippet
+
+snippet itt "italic text" A
+\textit{$1}$0
+endsnippet
+
+snippet bt "bold text" A
+\textbf{$1}$0
+endsnippet
+
+snippet mc "mathcal font" A
+\mathcal{$1}$0
+endsnippet
+
+snippet ms "mathscr font" A
+\mathscr{$1}$0
+endsnippet
+
+# MISC
+
+snippet link "hyperrefing"
+\hyperref[${1:label}]{${2:text}}$0
 endsnippet
