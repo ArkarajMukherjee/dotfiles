@@ -35,10 +35,10 @@ int main() {
         // If status is ANYTHING other than "Discharging", we assume plugged in.
         if (strcmp(status, "Discharging") != 0) {
              // PLUGGED IN (Charging or Full)
-             printf("[BAT]  %d%%\n", capacity);
+             printf("BAT  %d%%\n", capacity);
         } else {
              // BATTERY ONLY (No icon)
-             printf("[BAT] %d%%\n", capacity);
+             printf("BAT %d%%\n", capacity);
         }
 
         fflush(stdout);

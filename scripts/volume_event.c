@@ -13,10 +13,33 @@ void sink_info_callback(pa_context *c, const pa_sink_info *i, int eol, void *use
     // Check if muted
     int muted = i->mute;
 
+    // Check if an external audio device is connected 
+    // (Bluetooth, USB, Headphones, Headset, or HDMI)
+    int connected = 0;
+    if (strstr(i->name, "bluez_sink") != NULL || strstr(i->name, "usb") != NULL) {
+        connected = 1;
+    } else if (i->active_port) {
+        if (strstr(i->active_port->name, "headphone") != NULL ||
+            strstr(i->active_port->name, "headset") != NULL ||
+            strstr(i->active_port->name, "hdmi") != NULL) {
+            connected = 1;
+        }
+    }
+
+    // Build the status flags (M for Muted, A for Audio device connected)
+    char flags[4] = "";
+    if (muted || connected) {
+        strcat(flags, " ");
+        if (muted) strcat(flags, "M");
+        if (connected) strcat(flags, "A");
+    }
+
     // CHANGE IS HERE:
-    // If muted: returns " M" (Space + M) -> [VOL M]
-    // If unmuted: returns "" (Empty)     -> [VOL]
-    printf("[VOL%s] %.0f%%\n", muted ? " M" : "", volume_percent);
+    // If muted and connected: returns " MA" -> [VOL MA]
+    // If muted only: returns " M"          -> [VOL M]
+    // If connected only: returns " A"      -> [VOL A]
+    // If neither: returns "" (Empty)       -> [VOL]
+    printf("VOL%s %.0f%%\n", flags, volume_percent);
     
     fflush(stdout); // Crucial for Polybar!
 }
@@ -55,7 +78,7 @@ int main() {
     pa_context_connect(c, NULL, 0, NULL);
 
     if (pa_mainloop_run(m, &ret) < 0) {
-        printf("[VOL ERR]\n");
+        printf("VOL ERR\n");
         return 1;
     }
 

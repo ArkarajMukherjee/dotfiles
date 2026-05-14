@@ -1,5 +1,11 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =4
+let g:netrw_dirhistcnt =0
+let g:netrw_dirhist_0='/home/anon1'
+let g:netrw_dirhist_9='/'
+let g:netrw_dirhist_8='/home'
+let g:netrw_dirhist_7='/home/anon1'
+let g:netrw_dirhist_6='/home/anon1/.config'
+let g:netrw_dirhist_5='/home/anon1/.config/.vim'
 let g:netrw_dirhist_4='/home/anon1/.config/spotdl'
 let g:netrw_dirhist_3='/home/anon1/work/uni-stuff/sem_II/intro_to_statistics_and_computation_with_data'
 let g:netrw_dirhist_2='/home/anon1/.config/systemd/user'

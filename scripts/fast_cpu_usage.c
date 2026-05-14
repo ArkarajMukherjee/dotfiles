@@ -116,7 +116,7 @@ int main() {
             return 1;
         }
 
-        printf("[CPU]");
+        printf("CPU");
 
         while (fgets(buffer, BUF_SIZE, fp) != NULL) {
             if (strncmp(buffer, "cpu", 3) == 0 && buffer[3] >= '0' && buffer[3] <= '9') {

@@ -1,6 +1,8 @@
 let mapleader = " "
 let localleader = ","
 
+runtime! ftplugin/man.vim
+
 set mouse=a
 set rnu
 set number
@@ -10,12 +12,20 @@ set ignorecase
 set smartcase
 set tabstop=4
 set shiftwidth=4
+set expandtab
 set path+=~/work/**,~/projects/**,~/.config/**
 set autochdir
 set hidden
+set splitbelow
+set splitright
 
 nnoremap <leader>b :b#<cr>
 nnoremap <tab> :b 
+
+augroup vimrc
+    autocmd!
+    autocmd BufWritePost $MYVIMRC source $MYVIMRC
+augroup end
 
 " vim-plug
 call plug#begin('~/.config/vim/plugged')
@@ -47,4 +57,5 @@ nnoremap <up> <nop>
 nnoremap <down> <nop>
 nnoremap <left> <nop>
 nnoremap <right> <nop>
+
 set viminfo+=n~/.cache/vim/viminfo

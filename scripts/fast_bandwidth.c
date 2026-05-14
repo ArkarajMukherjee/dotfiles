@@ -75,7 +75,7 @@ int main() {
         format_speed(tx_speed, tx_str);
 
         // Updated Format: Right Aligned (%8s) with Icons after numbers
-        printf("[BAND] %8s %s %8s %s\n", tx_str, ICON_UP, rx_str, ICON_DOWN);
+        printf("BAND %8s %s %8s %s\n", tx_str, ICON_UP, rx_str, ICON_DOWN);
         fflush(stdout);
 
         prev = current;
