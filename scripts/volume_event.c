@@ -34,19 +34,21 @@ void sink_info_callback(pa_context *c, const pa_sink_info *i, int eol, void *use
         if (connected) strcat(flags, "A");
     }
 
-    // CHANGE IS HERE:
-    // If muted and connected: returns " MA" -> [VOL MA]
-    // If muted only: returns " M"          -> [VOL M]
-    // If connected only: returns " A"      -> [VOL A]
-    // If neither: returns "" (Empty)       -> [VOL]
     printf("VOL%s %.0f%%\n", flags, volume_percent);
     
     fflush(stdout); // Crucial for Polybar!
 }
 
-// This runs when an event (like volume change) happens
+// This runs when an event happens
 void subscribe_callback(pa_context *c, pa_subscription_event_type_t t, uint32_t idx, void *userdata) {
-    if ((t & PA_SUBSCRIPTION_EVENT_FACILITY_MASK) == PA_SUBSCRIPTION_EVENT_SINK) {
+    int facility = t & PA_SUBSCRIPTION_EVENT_FACILITY_MASK;
+    
+    // CHANGE IS HERE: 
+    // Now we listen for SINK (volume/mute), SERVER (default sink changed), 
+    // and CARD (device plugged in/out) events.
+    if (facility == PA_SUBSCRIPTION_EVENT_SINK || 
+        facility == PA_SUBSCRIPTION_EVENT_SERVER || 
+        facility == PA_SUBSCRIPTION_EVENT_CARD) {
         pa_context_get_sink_info_by_name(c, "@DEFAULT_SINK@", sink_info_callback, NULL);
     }
 }
@@ -54,7 +56,9 @@ void subscribe_callback(pa_context *c, pa_subscription_event_type_t t, uint32_t 
 void context_state_callback(pa_context *c, void *userdata) {
     switch (pa_context_get_state(c)) {
         case PA_CONTEXT_READY:
-            pa_context_subscribe(c, PA_SUBSCRIPTION_MASK_SINK, NULL, NULL);
+            // CHANGE IS HERE: 
+            // Subscribe to Server and Card events in addition to Sink events
+            pa_context_subscribe(c, PA_SUBSCRIPTION_MASK_SINK | PA_SUBSCRIPTION_MASK_SERVER | PA_SUBSCRIPTION_MASK_CARD, NULL, NULL);
             pa_context_set_subscribe_callback(c, subscribe_callback, NULL);
             pa_context_get_sink_info_by_name(c, "@DEFAULT_SINK@", sink_info_callback, NULL);
             break;
