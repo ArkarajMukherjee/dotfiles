@@ -25,7 +25,7 @@ default_border none
 # Remove title bars for floating windows
 default_floating_border none
 #For setting the wallpaper
-exec_always --no-startup-id feh --bg-fill ~/Downloads/forest_2.jpg
+exec_always --no-startup-id feh --bg-fill ~/Pictures/forest_2.jpg
 
 #starting nm-applet
 exec_always --no-startup-id nm-applet 
@@ -99,23 +99,32 @@ bindsym $mod+a exec rofi -show drun
 exec_always --no-startup-id killall greenclip
 exec_always --no-startup-id sh -c 'sleep 1 && greenclip daemon'
 
+#ncmpcpp
+bindsym $mod+n exec kitty -e ncmpcpp
+
 #vim
 bindsym $mod+x exec kitty -e vim
 
 #yazi
 bindsym $mod+y exec kitty -e yazi
 
+#screenlock
+bindsym $mod+i exec i3lock -i ~/Pictures/night.png
 #clipboard
 bindsym $mod+c exec rofi -modi "clipboard:greenclip print" -show clipboard
 
-# 1. Full Screen (Save to Pictures) -> Press Print
+# 1. Full Screen (Save to Pictures)
 bindsym Print exec --no-startup-id maim ~/Pictures/ss_$(date +%s).png
 
-# 2. Select Rectangle (Save to Pictures) -> Press Shift+Print
+# 2. Select Rectangle (Save to Pictures)
 bindsym Shift+Print exec --no-startup-id maim -s ~/Pictures/ss_select_$(date +%s).png
 
-# OPTIONAL: Copy to Clipboard instead of saving (Ctrl+Print)
-bindsym Ctrl+Print exec --no-startup-id maim -s | xclip -selection clipboard -t image/png
+# 3. Copy Full Screen to Clipboard
+bindsym Ctrl+Print exec --no-startup-id maim | xclip -selection clipboard -t image/png
+
+# 3. Copy selected rectangle to Clipboard
+bindsym Ctrl+Shift+Print exec --no-startup-id maim -s | xclip -selection clipboard -t image/png
+
 
 # change focus
 bindsym $mod+h focus left

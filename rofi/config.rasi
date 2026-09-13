@@ -1,6 +1,6 @@
 configuration {
     /* 1. Core Settings & Custom Modes */
-    modes: "drun,scripts:~/scripts/rofi-scripts.sh,files:~/scripts/rofi-files.sh,emoji";
+    modes: "drun,files:~/scripts/rofi-files.sh,emoji";
     font: "JetBrainsMono Nerd Font 12";
     terminal: "kitty";
     cycle: false;
@@ -8,7 +8,6 @@ configuration {
 	grab-keyboard: false;
     /* 2. Display names for the input prompt */
     display-drun: "apps: ";
-    display-scripts: "scripts: ";
     display-files: "files: ";
 	display-emoji: "emojis: ";
 	display-clipboard: "clipboard: ";
@@ -27,8 +26,7 @@ configuration {
     kb-mode-complete: "";
 
     kb-toggle-sort: "";
-    
-    kb-custom-1: "";
+	kb-custom-1: "";
     kb-custom-2: "";
     kb-custom-3: "";
     kb-custom-4: "";

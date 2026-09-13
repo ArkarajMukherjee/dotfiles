@@ -1,0 +1,5 @@
+[filechooser]
+cmd=/home/anon1/.config/rofi/scripts/rofi-filechooser.sh
+default_dir=$HOME
+open_mode = default
+save_mode = default

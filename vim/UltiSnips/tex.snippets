@@ -1,31 +1,35 @@
 # MATH
 
-snippet su "Summation"
-\sum_{$1}^{$2}$0
-endsnippet
-
-snippet int "Integration 1D"
-\int_{$1}^{$2}$3\,\mathrm{d}$4$0
-endsnippet
-
 snippet ff "Fractions" A
 \frac{$1}{$2}$0
-endsnippet
-
-snippet qb "qty brackets" A
-\qty($1)$0
-endsnippet
-
-snippet lim "limits"
-\lim_{$1}$0
 endsnippet
 
 snippet ss "subseteq"
 \subseteq$0
 endsnippet
 
+snippet sp "superseteq"
+\supseteq$0
+endsnippet
+
 snippet st "set"
 \qty{$1}$0
+endsnippet
+
+snippet ov "overline"
+\overline{$1}$0
+endsnippet
+
+snippet bgs "big symmetric"
+\big$1$2\big$1$0
+endsnippet
+
+snippet bggs "bigg symmetric"
+\bigg$1$2\bigg$1$0
+endsnippet
+
+snippet pp "commented pause"
+%\pause$0
 endsnippet
 
 # ENVIRONMENTS
@@ -49,6 +53,14 @@ snippet ii "Inline math mode" A
 \$$1\$$0
 endsnippet
 
+snippet al "Align"
+\begin{align*}
+$2
+\end{align*}
+$
+
+endsnippet
+
 snippet enar "arabic enumeration"
 \begin{enumerate}[label=\arabic*.]
     $1
@@ -57,7 +69,7 @@ $0
 endsnippet
 
 snippet enal "alphabetical enumeration"
-\begin{enumerate}[label=(\alph*)]
+\begin{enumerate}[label=\alph*.]
     $1
 \end{enumerate}
 $0
@@ -84,16 +96,12 @@ snippet bt "bold text" A
 \textbf{$1}$0
 endsnippet
 
-snippet mc "mathcal font" A
-\mathcal{$1}$0
-endsnippet
-
-snippet ms "mathscr font" A
-\mathscr{$1}$0
-endsnippet
-
 # MISC
 
 snippet link "hyperrefing"
 \hyperref[${1:label}]{${2:text}}$0
+endsnippet
+
+snippet flink "hyperrefing for the folland sols"
+\hyperref[prob:$1-$2]{Problem $1.$2}$0
 endsnippet

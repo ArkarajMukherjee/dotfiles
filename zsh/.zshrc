@@ -27,6 +27,10 @@ alias nts='vim ~/notes'
 alias zshrc='vim ~/.config/zsh/.zshrc'
 alias srczsh='source ~/.config/zsh/.zshrc'
 alias clcl='greenclip clear && echo -n "" | xclip -selection clipboard && (killall -q greenclip || true); (greenclip daemon > /dev/null 2>&1 &!)'
+alias streamanime="ani-cli --rofi"
+alias anime="fd -t f --base-directory ~/videos/Anime | rofi -dmenu -i -p "Anime:" | xargs -d '\n' -I {} -r mpv "$HOME/videos/Anime/{}""
+alias fsize='du -hd0'
+alias neofetch='fastfetch'
 # Uncomment the following line to use hyphen-insensitive completion.
 # Case-sensitive completion must be off. _ and - will be interchangeable.
 # HYPHEN_INSENSITIVE="true"
@@ -126,5 +130,6 @@ export MAXIMA_USERDIR="$HOME/.config/maxima"
 export TEXMFHOME="$HOME/.local/share/texmf"
 export R_HISTFILE="$HOME/.local/state/R/history"
 export XAUTHORITY="$XDG_RUNTIME_DIR/Xauthority"
+export MANPAGER="vim +MANPAGER --not-a-term -"
 alias startx="startx ~/.config/X11/xinitrc"
 alias wget="wget --hsts-file=\"$HOME/.local/share/wget-hsts\""
