@@ -33,6 +33,7 @@ call plug#begin('~/.config/vim/plugged')
 Plug 'alligator/accent.vim'
 Plug 'lervag/vimtex'
 Plug 'SirVer/ultisnips'
+Plug 'voldikss/vim-floaterm'
 
 call plug#end()
 
@@ -51,6 +52,14 @@ let g:UltiSnipsExpandTrigger       = '<Tab>'
 let g:UltiSnipsJumpForwardTrigger  = '<C-n>'
 let g:UltiSnipsJumpBackwardTrigger = '<C-p>'
 let g:UltiSnipsSnippetDirectories  = ['UltiSnips']
+
+"floaterm
+let g:floaterm_keymap_toggle = '<Leader>ft'
+let g:floaterm_keymap_new = '<leader>fc'
+let g:floaterm_keymap_next = '<Leader>fn'
+let g:floaterm_keymap_prev = '<Leader>fp'
+
+
 
 colorscheme accent
 nnoremap <up> <nop>

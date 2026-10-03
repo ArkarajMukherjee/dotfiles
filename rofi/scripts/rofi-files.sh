@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 if [ "$ROFI_RETV" -eq 0 ]; then
-    # -H includes hidden files, -t f limits it strictly to files so you don't accidentally try to open a folder
-    fd -H -t f . ~ 
+    # -H includes hidden files
+    fd --full-path '/' -H
 
 elif [ "$ROFI_RETV" -eq 1 ]; then
     if [ -n "$1" ]; then

@@ -1,0 +1,262 @@
+
+chdir(/etc)
+fchdir() to previous dir
+sourcing "/etc/vimrc"
+chdir(/usr/share/vim/vimfiles)
+fchdir() to previous dir
+line 11: sourcing "/usr/share/vim/vimfiles/archlinux.vim"
+finished sourcing /usr/share/vim/vimfiles/archlinux.vim
+continuing in /etc/vimrc
+finished sourcing /etc/vimrc
+chdir(/home/anon1)
+fchdir() to previous dir
+could not source "$HOME/.vimrc"
+chdir(/home/anon1/.vim)
+fchdir() to previous dir
+could not source "~/.vim/vimrc"
+chdir(/home/anon1/.config/vim)
+fchdir() to previous dir
+sourcing "~/.config/vim/vimrc"
+chdir(/usr/share/vim/vim92/ftplugin)
+fchdir() to previous dir
+line 4: sourcing "/usr/share/vim/vim92/ftplugin/man.vim"
+finished sourcing /usr/share/vim/vim92/ftplugin/man.vim
+continuing in /home/anon1/.config/vim/vimrc
+chdir(/home/anon1/.config/vim/autoload)
+fchdir() to previous dir
+line 31: sourcing "/home/anon1/.config/vim/autoload/plug.vim"
+finished sourcing /home/anon1/.config/vim/autoload/plug.vim
+continuing in /home/anon1/.config/vim/vimrc
+chdir(/usr/share/vim/vim92)
+fchdir() to previous dir
+line 88: sourcing "/usr/share/vim/vim92/filetype.vim"
+chdir(/home/anon1/.config/vim/plugged/vimtex/ftdetect)
+fchdir() to previous dir
+line 1651: sourcing "/home/anon1/.config/vim/plugged/vimtex/ftdetect/cls.vim"
+finished sourcing /home/anon1/.config/vim/plugged/vimtex/ftdetect/cls.vim
+continuing in /usr/share/vim/vim92/filetype.vim
+chdir(/home/anon1/.config/vim/plugged/vimtex/ftdetect)
+fchdir() to previous dir
+line 1651: sourcing "/home/anon1/.config/vim/plugged/vimtex/ftdetect/tex.vim"
+finished sourcing /home/anon1/.config/vim/plugged/vimtex/ftdetect/tex.vim
+continuing in /usr/share/vim/vim92/filetype.vim
+chdir(/home/anon1/.config/vim/plugged/vimtex/ftdetect)
+fchdir() to previous dir
+line 1651: sourcing "/home/anon1/.config/vim/plugged/vimtex/ftdetect/tikz.vim"
+finished sourcing /home/anon1/.config/vim/plugged/vimtex/ftdetect/tikz.vim
+continuing in /usr/share/vim/vim92/filetype.vim
+chdir(/home/anon1/.config/vim/plugged/ultisnips/ftdetect)
+fchdir() to previous dir
+line 1651: sourcing "/home/anon1/.config/vim/plugged/ultisnips/ftdetect/snippets.vim"
+finished sourcing /home/anon1/.config/vim/plugged/ultisnips/ftdetect/snippets.vim
+continuing in /usr/share/vim/vim92/filetype.vim
+chdir(/usr/share/vim/vimfiles/ftdetect)
+fchdir() to previous dir
+line 1651: sourcing "/usr/share/vim/vimfiles/ftdetect/meson.vim"
+finished sourcing /usr/share/vim/vimfiles/ftdetect/meson.vim
+continuing in /usr/share/vim/vim92/filetype.vim
+finished sourcing /usr/share/vim/vim92/filetype.vim
+continuing in plug#end
+chdir(/usr/share/vim/vim92)
+fchdir() to previous dir
+line 88: sourcing "/usr/share/vim/vim92/ftplugin.vim"
+finished sourcing /usr/share/vim/vim92/ftplugin.vim
+continuing in plug#end
+chdir(/usr/share/vim/vim92)
+fchdir() to previous dir
+line 88: sourcing "/usr/share/vim/vim92/indent.vim"
+finished sourcing /usr/share/vim/vim92/indent.vim
+continuing in plug#end
+chdir(/usr/share/vim/vim92/syntax)
+fchdir() to previous dir
+line 91: sourcing "/usr/share/vim/vim92/syntax/syntax.vim"
+chdir(/usr/share/vim/vim92/syntax)
+fchdir() to previous dir
+line 20: sourcing "/usr/share/vim/vim92/syntax/synload.vim"
+chdir(/usr/share/vim/vim92/syntax)
+fchdir() to previous dir
+line 22: sourcing "/usr/share/vim/vim92/syntax/syncolor.vim"
+chdir(/usr/share/vim/vim92/colors/lists)
+fchdir() to previous dir
+line 57: sourcing "/usr/share/vim/vim92/colors/lists/default.vim"
+finished sourcing /usr/share/vim/vim92/colors/lists/default.vim
+continuing in /usr/share/vim/vim92/syntax/syncolor.vim
+finished sourcing /usr/share/vim/vim92/syntax/syncolor.vim
+continuing in /usr/share/vim/vim92/syntax/synload.vim
+finished sourcing /usr/share/vim/vim92/syntax/synload.vim
+continuing in /usr/share/vim/vim92/syntax/syntax.vim
+Executing FileType Autocommands for "*"
+autocommand 0verbose exe "set syntax=" . expand("<amatch>")
+
+finished sourcing /usr/share/vim/vim92/syntax/syntax.vim
+continuing in plug#end
+chdir(/usr/share/vim/vim92/syntax)
+fchdir() to previous dir
+line 40: sourcing "/usr/share/vim/vim92/syntax/syntax.vim"
+chdir(/usr/share/vim/vim92/syntax)
+fchdir() to previous dir
+line 16: sourcing "/usr/share/vim/vim92/syntax/nosyntax.vim"
+Executing BufEnter Autocommands for "*"
+autocommand syn clear
+
+autocommand if exists("b:current_syntax") | unlet b:current_syntax | endif
+
+finished sourcing /usr/share/vim/vim92/syntax/nosyntax.vim
+continuing in /usr/share/vim/vim92/syntax/syntax.vim
+chdir(/usr/share/vim/vim92/syntax)
+fchdir() to previous dir
+line 20: sourcing "/usr/share/vim/vim92/syntax/synload.vim"
+chdir(/usr/share/vim/vim92/syntax)
+fchdir() to previous dir
+line 22: sourcing "/usr/share/vim/vim92/syntax/syncolor.vim"
+finished sourcing /usr/share/vim/vim92/syntax/syncolor.vim
+continuing in /usr/share/vim/vim92/syntax/synload.vim
+finished sourcing /usr/share/vim/vim92/syntax/synload.vim
+continuing in /usr/share/vim/vim92/syntax/syntax.vim
+Executing FileType Autocommands for "*"
+autocommand 0verbose exe "set syntax=" . expand("<amatch>")
+
+finished sourcing /usr/share/vim/vim92/syntax/syntax.vim
+continuing in /home/anon1/.config/vim/vimrc
+chdir(/usr/share/vim/vim92/colors/lists)
+fchdir() to previous dir
+line 55: sourcing "/usr/share/vim/vim92/colors/lists/default.vim"
+finished sourcing /usr/share/vim/vim92/colors/lists/default.vim
+continuing in /home/anon1/.config/vim/vimrc
+chdir(/home/anon1/.config/vim/plugged/accent.vim/colors)
+fchdir() to previous dir
+line 55: sourcing "/home/anon1/.config/vim/plugged/accent.vim/colors/accent.vim"
+chdir(/usr/share/vim/vim92/syntax)
+fchdir() to previous dir
+line 8: sourcing "/usr/share/vim/vim92/syntax/syncolor.vim"
+finished sourcing /usr/share/vim/vim92/syntax/syncolor.vim
+continuing in /home/anon1/.config/vim/plugged/accent.vim/colors/accent.vim
+chdir(/usr/share/vim/vim92/syntax)
+fchdir() to previous dir
+line 9: sourcing "/usr/share/vim/vim92/syntax/syncolor.vim"
+finished sourcing /usr/share/vim/vim92/syntax/syncolor.vim
+continuing in /home/anon1/.config/vim/plugged/accent.vim/colors/accent.vim
+finished sourcing /home/anon1/.config/vim/plugged/accent.vim/colors/accent.vim
+continuing in /home/anon1/.config/vim/vimrc
+finished sourcing ~/.config/vim/vimrc
+not found in 'packpath': "pack/*/start/*"
+chdir(/home/anon1/.config/vim/plugged/vimtex/plugin)
+fchdir() to previous dir
+sourcing "/home/anon1/.config/vim/plugged/vimtex/plugin/vimtex.vim"
+finished sourcing /home/anon1/.config/vim/plugged/vimtex/plugin/vimtex.vim
+chdir(/home/anon1/.config/vim/plugged/ultisnips/plugin)
+fchdir() to previous dir
+sourcing "/home/anon1/.config/vim/plugged/ultisnips/plugin/UltiSnips.vim"
+chdir(/home/anon1/.config/vim/plugged/ultisnips/autoload/UltiSnips)
+fchdir() to previous dir
+line 46: sourcing "/home/anon1/.config/vim/plugged/ultisnips/autoload/UltiSnips/map_keys.vim"
+finished sourcing /home/anon1/.config/vim/plugged/ultisnips/autoload/UltiSnips/map_keys.vim
+continuing in /home/anon1/.config/vim/plugged/ultisnips/plugin/UltiSnips.vim
+finished sourcing /home/anon1/.config/vim/plugged/ultisnips/plugin/UltiSnips.vim
+chdir(/usr/share/vim/vimfiles/plugin)
+fchdir() to previous dir
+sourcing "/usr/share/vim/vimfiles/plugin/fzf.vim"
+finished sourcing /usr/share/vim/vimfiles/plugin/fzf.vim
+chdir(/usr/share/vim/vim92/plugin)
+fchdir() to previous dir
+sourcing "/usr/share/vim/vim92/plugin/getscriptPlugin.vim"
+finished sourcing /usr/share/vim/vim92/plugin/getscriptPlugin.vim
+chdir(/usr/share/vim/vim92/plugin)
+fchdir() to previous dir
+sourcing "/usr/share/vim/vim92/plugin/gzip.vim"
+finished sourcing /usr/share/vim/vim92/plugin/gzip.vim
+chdir(/usr/share/vim/vim92/plugin)
+fchdir() to previous dir
+sourcing "/usr/share/vim/vim92/plugin/logiPat.vim"
+finished sourcing /usr/share/vim/vim92/plugin/logiPat.vim
+chdir(/usr/share/vim/vim92/plugin)
+fchdir() to previous dir
+sourcing "/usr/share/vim/vim92/plugin/manpager.vim"
+finished sourcing /usr/share/vim/vim92/plugin/manpager.vim
+chdir(/usr/share/vim/vim92/plugin)
+fchdir() to previous dir
+sourcing "/usr/share/vim/vim92/plugin/matchparen.vim"
+finished sourcing /usr/share/vim/vim92/plugin/matchparen.vim
+chdir(/usr/share/vim/vim92/plugin)
+fchdir() to previous dir
+sourcing "/usr/share/vim/vim92/plugin/netrwPlugin.vim"
+not found in 'packpath': "pack/*/start/netrw"
+chdir(/usr/share/vim/vim92)
+fchdir() to previous dir
+chdir(/home/anon1/.config/vim)
+fchdir() to previous dir
+chdir(/home/anon1/.config/vim/plugged/accent.vim)
+fchdir() to previous dir
+chdir(/home/anon1/.config/vim/plugged/vimtex)
+fchdir() to previous dir
+chdir(/home/anon1/.config/vim/plugged/ultisnips)
+fchdir() to previous dir
+chdir(/usr/share/vim/vimfiles)
+fchdir() to previous dir
+chdir(/usr/share/vim/vim92)
+fchdir() to previous dir
+chdir(/usr/share/vim/vim92/pack/dist/opt)
+fchdir() to previous dir
+chdir(/usr/share/vim/vim92/pack/dist/opt/netrw/plugin)
+fchdir() to previous dir
+line 7: sourcing "/usr/share/vim/vim92/pack/dist/opt/netrw/plugin/netrwPlugin.vim"
+finished sourcing /usr/share/vim/vim92/pack/dist/opt/netrw/plugin/netrwPlugin.vim
+continuing in /usr/share/vim/vim92/plugin/netrwPlugin.vim
+finished sourcing /usr/share/vim/vim92/plugin/netrwPlugin.vim
+chdir(/usr/share/vim/vim92/plugin)
+fchdir() to previous dir
+sourcing "/usr/share/vim/vim92/plugin/openPlugin.vim"
+finished sourcing /usr/share/vim/vim92/plugin/openPlugin.vim
+chdir(/usr/share/vim/vim92/plugin)
+fchdir() to previous dir
+sourcing "/usr/share/vim/vim92/plugin/rrhelper.vim"
+finished sourcing /usr/share/vim/vim92/plugin/rrhelper.vim
+chdir(/usr/share/vim/vim92/plugin)
+fchdir() to previous dir
+sourcing "/usr/share/vim/vim92/plugin/spellfile.vim"
+finished sourcing /usr/share/vim/vim92/plugin/spellfile.vim
+chdir(/usr/share/vim/vim92/plugin)
+fchdir() to previous dir
+sourcing "/usr/share/vim/vim92/plugin/tarPlugin.vim"
+finished sourcing /usr/share/vim/vim92/plugin/tarPlugin.vim
+chdir(/usr/share/vim/vim92/plugin)
+fchdir() to previous dir
+sourcing "/usr/share/vim/vim92/plugin/tohtml.vim"
+finished sourcing /usr/share/vim/vim92/plugin/tohtml.vim
+chdir(/usr/share/vim/vim92/plugin)
+fchdir() to previous dir
+sourcing "/usr/share/vim/vim92/plugin/tutor.vim"
+finished sourcing /usr/share/vim/vim92/plugin/tutor.vim
+chdir(/usr/share/vim/vim92/plugin)
+fchdir() to previous dir
+sourcing "/usr/share/vim/vim92/plugin/vimballPlugin.vim"
+finished sourcing /usr/share/vim/vim92/plugin/vimballPlugin.vim
+chdir(/usr/share/vim/vim92/plugin)
+fchdir() to previous dir
+sourcing "/usr/share/vim/vim92/plugin/zipPlugin.vim"
+finished sourcing /usr/share/vim/vim92/plugin/zipPlugin.vim
+not found in 'packpath': "pack/*/start/*"
+chdir(/home/anon1/.config/vim/plugged/ultisnips/after/plugin)
+fchdir() to previous dir
+sourcing "/home/anon1/.config/vim/plugged/ultisnips/after/plugin/UltiSnips_after.vim"
+finished sourcing /home/anon1/.config/vim/plugged/ultisnips/after/plugin/UltiSnips_after.vim
+Opening the X display took 0 msec
+Reading viminfo file "/home/anon1/.cache/vim/viminfo" info oldfiles
+Opening the X display took 0 msec
+Executing BufWinEnter Autocommands for "*"
+autocommand autocmd SafeState * ++once call s:Highlight_Matching_Pair()
+
+Executing BufEnter Autocommands for "*"
+autocommand sil call s:LocalBrowse(expand("<amatch>"))
+
+Executing VimEnter Autocommands for "*"
+autocommand sil call s:VimEnter(expand("<amatch>"))
+
+Executing CursorMoved Autocommands for "*"
+autocommand call s:Highlight_Matching_Pair()
+
+Executing SafeState Autocommands for "*"
+autocommand call s:Highlight_Matching_Pair()
+
+
+Writing viminfo file "/home/anon1/.cache/vim/viminfo"
