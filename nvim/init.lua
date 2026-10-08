@@ -44,7 +44,8 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-    {
+    -- Lazy.nvim
+   {
         "voldikss/vim-floaterm",
          init = function()
             vim.g.floaterm_width = 0.8
@@ -150,32 +151,61 @@ require("lazy").setup({
 })
 
 local ascii_art = {
-  ⣿⣿⠇⠁⢨⢰⣶⠨⣀⢹⣿⣿⡷⣿⠹⢿⣿⣿⣿⣿⣷⣽⢿⣿⡇⣿⣿⣿⣾⣿,
-  ⣿⡟⢠⣿⢸⠽⣟⣃⠙⡌⣿⣿⡇⡏⣻⣿⣿⣿⣿⣿⣿⣿⣦⠛⣿⡹⣿⣿⣿⣿,
-  ⣿⠇⣿⣭⢸⣿⣿⣿⡆⡐⡸⣿⣧⢃⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣌⢷⡹⣿⣿⣿,
-  ⡿⣹⣿⣿⡟⣿⣿⣿⣿⣌⠔⣽⣿⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⡱⢹⣿⣿,
-  ⢣⢸⣿⣿⣿⣿⣿⣿⣿⣿⣦⣘⣿⡏⣿⣿⣿⡯⠽⠿⠛⠛⠛⠛⠛⠛⠛⢲⣻⣿,
-  ⡬⡋⣿⣿⣿⢿⠿⠿⣻⣿⣿⣷⡮⠻⢹⣿⣿⣇⣀⣀⣀⠤⢄⡀⠀⣠⢠⣿⡟⢿,
-  ⢀⣇⠻⠑⠈⠀⠀⠀⢹⣿⣿⣿⣿⣦⡀⢿⣿⣿⣿⢿⣿⣀⣈⣁⣉⣡⣥⠿⣗⠜,
-  ⠈⢱⡰⡀⣞⠓⠢⣐⣸⣯⣿⣿⣿⣿⣿⣮⣿⣿⣿⣿⣿⣿⣯⣧⣷⣿⣿⣶⣿⣧,
-  ⠠⢸⡅⣿⣵⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣽,
-  ⠀⢸⠇⣿⣿⣿⣿⣿⣿⣿⠿⢿⣻⣛⣛⣻⣭⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡟,
-  ⠀⣼⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡟⡟,
-  ⠸⣿⢀⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢃,
-  ⣎⢿⢸⢰⡈⡛⠻⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⡟⠋⠘⣰,
-  ⣿⣯⠸⢸⠉⡿⣿⣷⠨⣩⢛⠛⠿⣿⣿⣿⣿⣿⣿⣿⣿⡿⣟⣻⣽⣿⡌⣿⠃⣿,
-  ⣿⣿⣧⡎⢰⣿⠏⣿⢸⣟⠸⣿⢿⣶⠨⠭⢉⣽⣿⢹⣾⣿⣿⣿⡿⣻⣥⣾⢩⠟  ,
-}
+  "⣿⣿⠇⠁⢨⢰⣶⠨⣀⢹⣿⣿⡷⣿⠹⢿⣿⣿⣿⣿⣷⣽⢿⣿⡇⣿⣿⣿⣾⣿",
+  "⣿⡟⢠⣿⢸⠽⣟⣃⠙⡌⣿⣿⡇⡏⣻⣿⣿⣿⣿⣿⣿⣿⣦⠛⣿⡹⣿⣿⣿⣿",
+  "⣿⠇⣿⣭⢸⣿⣿⣿⡆⡐⡸⣿⣧⢃⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣌⢷⡹⣿⣿⣿",
+  "⡿⣹⣿⣿⡟⣿⣿⣿⣿⣌⠔⣽⣿⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⡱⢹⣿⣿",
+  "⢣⢸⣿⣿⣿⣿⣿⣿⣿⣿⣦⣘⣿⡏⣿⣿⣿⡯⠽⠿⠛⠛⠛⠛⠛⠛⠛⢲⣻⣿",
+  "⡬⡋⣿⣿⣿⢿⠿⠿⣻⣿⣿⣷⡮⠻⢹⣿⣿⣇⣀⣀⣀⠤⢄⡀⠀⣠⢠⣿⡟⢿",
+  "⢀⣇⠻⠑⠈⠀⠀⠀⢹⣿⣿⣿⣿⣦⡀⢿⣿⣿⣿⢿⣿⣀⣈⣁⣉⣡⣥⠿⣗⠜",
+  "⠈⢱⡰⡀⣞⠓⠢⣐⣸⣯⣿⣿⣿⣿⣿⣮⣿⣿⣿⣿⣿⣿⣯⣧⣷⣿⣿⣶⣿⣧",
+  "⠠⢸⡅⣿⣵⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣽",
+  "⠀⢸⠇⣿⣿⣿⣿⣿⣿⣿⠿⢿⣻⣛⣛⣻⣭⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡟",
+  "⠀⣼⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡟⡟",
+  "⠸⣿⢀⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢃",
+  "⣎⢿⢸⢰⡈⡛⠻⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⡟⠋⠘⣰",
+  "⣿⣯⠸⢸⠉⡿⣿⣷⠨⣩⢛⠛⠿⣿⣿⣿⣿⣿⣿⣿⣿⡿⣟⣻⣽⣿⡌⣿⠃⣿",
+  "⣿⣿⣧⡎⢰⣿⠏⣿⢸⣟⠸⣿⢿⣶⠨⠭⢉⣽⣿⢹⣾⣿⣿⣿⡿⣻⣥⣾⢩⠟",
+  "Hello anon! What ya upto today?",
+  }
 
 vim.api.nvim_create_autocmd("VimEnter", {
   callback = function()
-    -- Only print ASCII art if opening Neovim without file arguments
+    -- Only show if opening Neovim without file arguments
     if vim.fn.argc() == 0 then
-      local chunks = {}
-      for _, line in ipairs(ascii_art) do
-        table.insert(chunks, { line .. "\n", "Title" })
+      local buf = vim.api.nvim_get_current_buf()
+      local win_height = vim.api.nvim_win_get_height(0)
+      local win_width = vim.api.nvim_win_get_width(0)
+      
+      local art_height = #ascii_art
+      -- Calculate width based on the first line (requires handling utf-8 braille chars correctly)
+      local art_width = vim.fn.strdisplaywidth(ascii_art[1])
+      
+      -- Calculate vertical and horizontal centering
+      local start_row = math.floor((win_height - art_height) / 2)
+      local start_col = math.floor((win_width - art_width) / 2)
+      
+      -- Build the lines to insert
+      local lines = {}
+      for _ = 1, start_row do
+        table.insert(lines, "")
       end
-      vim.api.nvim_echo(chunks, false, {})
+      
+      local padding = string.rep(" ", math.max(0, start_col))
+      for _, line in ipairs(ascii_art) do
+        table.insert(lines, padding .. line)
+      end
+      
+      -- Insert into buffer
+      vim.api.nvim_buf_set_lines(buf, 0, -1, false, lines)
+      
+      -- Make the buffer read-only and hide line numbers
+      vim.bo[buf].modifiable = false
+      vim.bo[buf].modified = false
+      vim.bo[buf].buftype = "nofile"
+      vim.bo[buf].swapfile = false
+      vim.opt_local.number = false
+      vim.opt_local.relativenumber = false
     end
   end,
 })
